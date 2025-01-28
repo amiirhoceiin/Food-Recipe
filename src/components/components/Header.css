@@ -1,0 +1,24 @@
+.foodRecipeLogo{
+  color: rgb(211, 198, 223);
+}
+.navClas{
+    background-color: rgb(149, 90, 204);  
+    height: 50px;
+  }
+  .navbar-brand {
+    font-size: 25px;
+    font-weight: 1000;
+   cursor: pointer;
+  }
+  .header2 {
+    margin: 0 100px;
+  }
+  .btnCreate {
+    margin-left: 40px;
+    width: 200px;
+    background-color: rgb(211, 198, 223);
+    border: 1px solid rgb(211, 198, 223);
+    color: rgb(149, 90, 204);
+    font-size: large;
+    font-weight: 600;
+  }

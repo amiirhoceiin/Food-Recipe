@@ -1,0 +1,36 @@
+.Addpage{
+    position: relative;
+    bottom: 90px;
+    padding: 20px;
+    border: 2px solid lueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: blueviolet;
+    width: 50%;
+    margin: 50px auto;
+    border-radius: 25px ;
+    -webkit-border-radius: 25px ;
+    -moz-border-radius: 25px ;
+    -ms-border-radius: 25px ;
+    -o-border-radius: 25px ;
+}
+.Formpage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.ingredients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.btningredients {
+    margin-left: 10px;
+}
