@@ -14,7 +14,7 @@ export default function ThemeSelector() {
              <button className='btn btn-primary m-1 btnstyle' onClick={()=>changeColor('blue')}></button>
              <button className='btn m-1  btnpurple btnstyle' onClick={()=>changeColor('rgb(149, 90, 204)')}></button>
         </div>
-        <div className='imagemode  col-1 d-flex justify-content-center'>
+        <div className='imagemode  col-1 d-flex justify-content-center mt-2'>
                 <img  width="64" height="64" src="https://img.icons8.com/external-outline-berkahicon/64/external-dark-mix-ui-social-media-outline-berkahicon.png" alt="external-dark-mix-ui-social-media-outline-berkahicon" onClick={()=>changeMode(mode==='dark' ? 'light' :'dark')}/>
              </div>
       </div>
