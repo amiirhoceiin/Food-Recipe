@@ -32,7 +32,7 @@ export default function Card() {
                  <p>{card.cookingTime} to make</p> 
                  <p className='card-text'>{card.method.slice(0,100)}...</p> 
                  <ul>{card.ingredients.slice(0,3).map(ing=><li key={ing}>{ing}</li>)}...</ul>
-                 <Link to={`/recipes/${card.id}`} id='linkrecipe'>Cooking</Link>
+                 <Link to={`/recipes/${card.id}`} id='linkrecipe'className='btn'>Cooking</Link>
                 </div>
               </div>
         ))}
