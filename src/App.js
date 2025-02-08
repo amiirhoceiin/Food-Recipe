@@ -22,7 +22,7 @@ function App() {
         <Route path = '/add' element={<Add/>}/>
         <Route path = '/recipes/:id' element={<Recipes/>}/> 
         <Route path='/search' element={<Search/>} />
-        <Route path='/*' element={<Page404/>}/>
+        <Route path='*' element={<Page404/>}/>
         
        </Routes> 
      </BrowserRouter>
