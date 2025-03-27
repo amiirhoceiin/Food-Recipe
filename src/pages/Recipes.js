@@ -1,7 +1,7 @@
 
 import { useParams } from 'react-router-dom'
 import useFetch from '../hooks/useFetch';
-import './recipes.css'
+
 
 export default function Recipes() {
     const {id} = useParams()
@@ -11,14 +11,14 @@ export default function Recipes() {
      
     
   return (
-    <div className='container-fluid '>
+    <div className=' '>
        {isLoading && <p>loading ....</p>}
         {error && <p>{error}</p>}
-       <div className='d-flex  justify-content-center align-items-center row allcards'>
+       <div className=''>
        {cards && (
-    <div className='card col-6 cardRecipe shadow-lg'>  
-    <div className='card-body m-2'>
-        <h1 className='card-title'>{cards.title}</h1>
+    <div className=''>  
+    <div className=''>
+        <h1 className=''>{cards.title}</h1>
         <p>{cards.cookingTime}</p>
         <ul>{cards.ingredients.map(ing => <li key={ing}>{ing}</li>)}</ul>
         <p>{cards.method}</p>

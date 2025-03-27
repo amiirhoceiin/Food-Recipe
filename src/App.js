@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './App.css';
 import React from 'react'
 import Header from './components/components/Header'
@@ -13,7 +13,7 @@ import { useTheme } from './hooks/useTheme';
 function App() {
    const {mode} = useTheme();
   return (
-    <div className={`App ${mode} `}>
+    <div className='bg-slate-200' style={{minHeight:'100vh'}}>
       
       <BrowserRouter>
        <Header/>

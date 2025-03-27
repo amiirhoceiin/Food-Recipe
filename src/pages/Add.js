@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import './add.css'
 import useFetch from '../hooks/useFetch';
 
 
@@ -84,26 +83,27 @@ export default function Add() {
  
 
   return (
-      <div className=' Addpage '>
-      <form onSubmit={handleSubmit} className='Formpage ' >  
+      
+      <div className=' flex flex-col items-center ' style={{width:'100%'}}>
+      <form onSubmit={handleSubmit} className=' rounded-lg mt-20 flex flex-col justify-between items-center bg-slate-300  p-4' style={{height:'500px',width:'400px'}}>  
 
-      <input type="text" value={title} placeholder='settitle' onChange={handleTitle} required className='form-control'/>
+      <input type="text" value={title} placeholder='settitle' onChange={handleTitle} required className='p-1 rounded-md'/>
 
-      <input type="text" value={cookingTime} placeholder='setCookingTime' onChange={handleCookingTime} required className='form-control'/>
+      <input type="text" value={cookingTime} placeholder='setCookingTime' onChange={handleCookingTime} required className='p-1  rounded-md'/>
 
-      <textarea  value={method}  className='form-control' placeholder='setMethod' onChange={handleMethod} required/>
+      <textarea  value={method}  className='p-1  rounded-md' placeholder='setMethod' onChange={handleMethod} required/>
 
-       <div className='ingredients'>
-       <input type="text" className='form-control' value={newIngredients}  placeholder='setingredients' onChange={(e)=>{setNewIngredients(e.target.value)}}/>
-       <button onClick={handleIngredients} className='btn btn-light btningredients'>new</button>
+       <div className='flex flex-col'>
+       <input type="text" className='p-1  rounded-md' value={newIngredients}  placeholder='setingredients' onChange={(e)=>{setNewIngredients(e.target.value)}}/>
+       <button onClick={handleIngredients} className=''>new</button>
        </div>
 
 
-       <button type='submit' className='btn btn-light' >Add</button>    
+       <button type='submit' className='bg-orange-500 text-blue-900 w-32 rounded-md' >Add</button>    
       
       </form>
 
-      <button onClick={()=>navigate('/')} className='btn btn-light'>Home page</button>
+      <button onClick={()=>navigate('/')} className=''>Home page</button>
 
     </div>
 

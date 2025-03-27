@@ -9,8 +9,8 @@ export default function SearchBar() {
      navigate(`/search?q=${term}`)
     }
   return (
-    <form onSubmit={handleSearch}>
-        <input style={{borderRadius : '20px',border : 'none' ,paddingLeft :'10px'}} type="text" value={term} placeholder='Search' onChange={(e)=>setTerm(e.target.value)} required/>
+    <form onSubmit={handleSearch} className=' text-center w-44 md:w-96 md:flex'>
+        <input className=' rounded-md w-32 md:w-80 p-1' type="text" value={term} placeholder='Search' onChange={(e)=>setTerm(e.target.value)} required/>
     </form>
   )
 }

@@ -1,10 +1,6 @@
 import { Link } from 'react-router-dom'
 import useFetch from '../hooks/useFetch';
 import { useState,useEffect } from 'react';
-import '../components/components/Header'
-import './Card.css' 
-
-// import Header from '../components/components/Header';
 
 export default function Card() {
 
@@ -12,8 +8,6 @@ export default function Card() {
   const {data : card,isLoading,error} = useFetch(url);
   const [cards,setCards] = useState(card); 
     
- 
-
   useEffect(()=>{ 
     if(card){
       setCards(card);
@@ -21,18 +15,18 @@ export default function Card() {
   },[card])
 
   return (
-    <div className='container-fluid'>
+    <div className='  flex justify-center mt-20 '>
         {isLoading && <p>loading ....</p>}
         {error && <p>{error}</p>}
-       <div className='d-flex justify-content-center align-items-stretch row allcards '>
+       <div className='container  grid sm:grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-4 p-2 '>
        {cards && cards.map(card=>(
-            <div key={card.id} className='card col-3 shadow-lg d-flex justify-content-center align-items-center m-4' style={{height : 'auto'}}>
-              <div className='card-body cardbody'>
-                <h1 className='card-title'>{card.title}</h1>
-                 <p>{card.cookingTime} to make</p> 
-                 <p className='card-text'>{card.method.slice(0,100)}...</p> 
-                 <ul>{card.ingredients.slice(0,3).map(ing=><li key={ing}>{ing}</li>)}...</ul>
-                 <Link to={`/recipes/${card.id}`} id='linkrecipe'className='btn'>Cooking</Link>
+            <div key={card.id} className=' rounded-md flex bg-slate-300 hover:bg-slate-200' >
+              <div className='flex flex-col justify-between h-80 ' style={{width:'100%'}}>
+                <h1 className='text-center text-2xl m-2'>{card.title}</h1>
+                 <p className='text-center p-2'>{card.cookingTime} to make</p> 
+                 <p className='px-2 text-center '>{card.method.slice(0,100)}...</p> 
+                 <ul className='text-left p-2'>{card.ingredients.slice(0,3).map(ing=><li key={ing}>{ing}</li>)}...</ul>
+                 <Link to={`/recipes/${card.id}`}  className='bg-orange-500 rounded p-1 m-2 hover:bg-orange-400'>Cooking</Link>
                 </div>
               </div>
         ))}

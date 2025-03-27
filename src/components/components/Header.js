@@ -3,7 +3,6 @@ import './Header.css';
 import { useNavigate } from 'react-router-dom';
 import SearchBar from './SearchBar';
 import { useTheme } from '../../hooks/useTheme';
-import ThemeSelector from './ThemeSelector';
 
 
 export default function Header() {
@@ -16,28 +15,27 @@ export default function Header() {
 
    
   return (
-    <div>
-      <nav className="nav navClas" style={{ backgroundColor: color }}>
-        <div className="container-fluid d-flex align-items-center header2 ">
-          <h1 className="navbar-brand foodRecipeLogo" onClick={() => navigate('/')}>
+    
+    <div className='bg-blue-900 flex flex-col items-center ' style={{width:'100%'}}>
+              <div className=" flex justify-between  p-3" style={{width:'100%',maxWidth:'1200px'}}>
+          <h1 className="text-xl font-normal md:text-3xl text-orange-600 md:font-bold " onClick={() => navigate('/')}>
             Food Recipe
           </h1>
-          <div className="d-flex justify-content-center align-items-center ms-auto">
-            <SearchBar/>
+          <SearchBar/>
+          <div className=" flex justify-between">
+            
               
               <button
                 type="button"
-                className={` btn btn-primary btnCreate`} 
+                className={`bg-orange-600 rounded-md p-1 hover:bg-orange-500`} 
                 onClick={handleClick}
               >
                 create recipe
               </button>
     
           </div>
-        </div>
           
-      </nav>
-      <ThemeSelector/>
+        </div>
     </div>
   );
 }
